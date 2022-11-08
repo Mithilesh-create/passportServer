@@ -8,7 +8,7 @@ const swaggerJsDoc = require("swagger-jsdoc");
 
 const router = require("./Quote");
 const auth = require("./Quote/auth");
-const port = process.env.PORT || 4000;
+const port = process.env.PORT;
 
 app.use(auth);
 app.use("/crud", router);
@@ -29,11 +29,6 @@ const options = {
         },
       },
     },
-    // security: [
-    //   {
-    //     bearerAuth: [],
-    //   },
-    // ],
   },
 
   servers: [
