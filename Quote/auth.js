@@ -150,7 +150,7 @@ auth.post("/register", async (req, res) => {
       username: createNewUser.username,
       id: createNewUser._id,
     };
-    const token = jwt.sign(data, process.env.Secret, { expiresIn: "1d" });
+    const token = jwt.sign(data, process.env.SECRET_KEY, { expiresIn: "1d" });
     return res.status(201).json({
       message: "Success",
       data: {
@@ -174,7 +174,7 @@ auth.post("/login", async (req, res) => {
       username: checkUseremail.username,
       id: checkUseremail._id,
     };
-    const token = jwt.sign(data, process.env.Secret, { expiresIn: "1d" });
+    const token = jwt.sign(data, process.env.SECRET_KEY, { expiresIn: "1d" });
     return res.status(201).json({
       message: "Success",
       data: {
