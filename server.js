@@ -36,7 +36,7 @@ const options = {
       url: "http://localhost:8080",
     },
   ],
-  apis: ["./Quote/*.js"],
+  apis: ["./route.js"],
 };
 
 const specs = swaggerJsDoc(options);
