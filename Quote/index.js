@@ -9,7 +9,7 @@ router.use(passport.initialize());
 require("../passport");
 
 /**
- * @swagger
+ * @openapi
  * components:
  *  schemas:
  *    Quotes:
@@ -61,7 +61,7 @@ require("../passport");
  *         description: Internal server error.
  */
 /**
- * @swagger
+ * @openapi
  *  /crud/read/{id}:
  *   get:
  *     security:            
@@ -116,7 +116,7 @@ require("../passport");
  *         description: Internal server error.
  */
 /**
- * @swagger
+ * @openapi
  *  /crud/update/{id}:
  *   put:
  *     security:            
@@ -151,7 +151,7 @@ require("../passport");
  *         description: Internal server error.
  */
 /**
- * @swagger
+ * @openapi
  *  /crud/delete/{id}:
  *   delete:
  *     security:            

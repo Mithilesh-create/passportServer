@@ -7,7 +7,7 @@ const User = require("../schema/User");
 auth.use(express.json());
 auth.use(cors());
 /**
- * @swagger
+ * @openapi
  * components:
  *  schemas:
  *    Register:
@@ -34,7 +34,7 @@ auth.use(cors());
  *        password: 1234
  */
 /**
- * @swagger
+ * @openapi
  * components:
  *  schemas:
  *    Login:

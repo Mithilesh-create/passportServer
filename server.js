@@ -41,7 +41,9 @@ const options = {
 
 const specs = swaggerJsDoc(options);
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
-
+app.get("/doc",(req,res)=>{
+  res.status(200).send(specs)
+})
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
