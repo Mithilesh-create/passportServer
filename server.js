@@ -31,7 +31,12 @@ const options = {
     },
     servers: [
       {
+        url: "http://65.2.73.17:8080",
+        description:"production server"
+      },
+      {
         url: "http://localhost:8080",
+        description:"local server"
       },
     ],
   },
