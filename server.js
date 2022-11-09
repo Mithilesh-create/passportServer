@@ -9,7 +9,7 @@ const swaggerJsDoc = require("swagger-jsdoc");
 const router = require("./Quote");
 const auth = require("./Quote/auth");
 const port = process.env.PORT;
-
+const route = require("./route");
 app.use(auth);
 app.use("/crud", router);
 const options = {
@@ -36,14 +36,14 @@ const options = {
       url: "http://localhost:8080",
     },
   ],
-  apis: ["./route.js"],
+  apis: ["route.js"],
 };
 
 const specs = swaggerJsDoc(options);
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
-app.get("/doc",(req,res)=>{
-  res.status(200).send(specs)
-})
+app.get("/doc", (req, res) => {
+  res.status(200).send(specs);
+});
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
